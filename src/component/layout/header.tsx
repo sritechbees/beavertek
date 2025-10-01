@@ -74,12 +74,12 @@ const Header: React.FC = () => {
               </Link>
             </li>
             <li>
-              <Link href="/products" className="hover:text-green-700 transition">
+              <Link href="/products/productherosection" className="hover:text-green-700 transition">
                 Products
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="hover:text-green-700 transition">
+              <Link href="/contact/contactherosection" className="hover:text-green-700 transition">
                 Contact
               </Link>
             </li>
