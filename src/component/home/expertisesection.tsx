@@ -6,6 +6,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { FaDatabase, FaRobot, FaUsers } from "react-icons/fa";
 import { MdOutlineReviews, MdOutlineStarRate } from "react-icons/md";
+import Link from "next/link";
 
 export default function ExpertiseSection() {
   useEffect(() => {
@@ -13,10 +14,10 @@ export default function ExpertiseSection() {
   }, []);
 
   return (
-    <section className="relative bg-gradient-to-r from-[#0f172a] via-[#1e293b] to-[#0f172a] text-white py-20 overflow-hidden">
-      {/* AI floating glow effects */}
-      <div className="absolute top-10 left-10 w-60 h-60 bg-cyan-500/20 blur-3xl rounded-full animate-pulse"></div>
-      <div className="absolute bottom-10 right-10 w-72 h-72 bg-purple-500/20 blur-3xl rounded-full animate-bounce"></div>
+    <section className="relative  text-white py-16 overflow-hidden">
+      {/* AI floating glow effects
+      <div className="absolute -top-28 -left-28 w-96 h-96 bg-yellow-300/40 rounded-full blur-3xl animate-pulse pointer-events-none" />
+        <div className="absolute -bottom-28 -right-28 w-[28rem] h-[28rem] bg-emerald-400/30 rounded-full blur-3xl animate-pulse pointer-events-none" /> */}
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
         {/* Left Content */}
@@ -25,7 +26,7 @@ export default function ExpertiseSection() {
             What We Offer
           </h3>
           <h2 className="text-4xl md:text-5xl font-extrabold leading-snug bg-gradient-to-r from-cyan-400 via-green-400 to-purple-500 bg-clip-text text-transparent mb-6">
-            Expertise Across Core IT Services
+            Expertise<span className="text-gray-950"> Across Core</span>  IT Services
           </h2>
           <h4 className="text-2xl font-semibold text-cyan-300 mb-6">
             Data Analytics and Application Development
@@ -34,7 +35,7 @@ export default function ExpertiseSection() {
           <ul className="space-y-4 text-gray-300">
             <li className="flex items-start gap-3">
               <FaDatabase className="text-cyan-400 text-2xl mt-1" />
-              <p>
+              <p className="text-gray-600 text-[17px]">
                 BeaverTek IT Services provides data analytics by collecting,
                 cleaning, transforming, and analyzing data to extract useful
                 insight and support decision-making.
@@ -42,7 +43,7 @@ export default function ExpertiseSection() {
             </li>
             <li className="flex items-start gap-3">
               <FaRobot className="text-green-400 text-2xl mt-1" />
-              <p>
+              <p className="text-gray-600 text-[17px]">
                 Our IT Team develops applications to meet user needs with
                 designing, building, testing, and deploying using models like
                 Waterfall, Agile, and DevOps.
@@ -51,6 +52,7 @@ export default function ExpertiseSection() {
           </ul>
 
           {/* CTA Button with animation */}
+          <Link href="/customers/customerherosection">
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
@@ -58,6 +60,7 @@ export default function ExpertiseSection() {
           >
             Explore More →
           </motion.button>
+          </Link>
         </div>
 
         {/* Right Content - Image with floating badges */}

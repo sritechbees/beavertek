@@ -4,6 +4,9 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Image from "next/image";
+import UniqueSection from "./uniquesection";
+import ExpertiseSection from "./expertisesection";
+import TestimonialsSection from "./testimonials";
 
 export default function WhoWeAre() {
   useEffect(() => {
@@ -67,16 +70,12 @@ export default function WhoWeAre() {
           </div>
         </div>
 
-        {/* Call To Action Button */}
-        <div data-aos="fade-up" data-aos-delay="600" className="mt-10">
-          <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full text-lg font-semibold text-white shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 group">
-            Learn More
-            <span className="ml-2 inline-block transform group-hover:translate-x-1 transition-transform">
-              →
-            </span>
-          </button>
-        </div>
+       
+       
       </div>
+      <UniqueSection/>
+      <ExpertiseSection/>
+      <TestimonialsSection/>
     </section>
   );
 }

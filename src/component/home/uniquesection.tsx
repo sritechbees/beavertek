@@ -4,7 +4,6 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { FaSuitcase, FaCogs, FaSyncAlt } from "react-icons/fa";
-import { AiOutlineFundProjectionScreen } from "react-icons/ai";
 import { MdAnalytics } from "react-icons/md";
 import { RiCpuLine } from "react-icons/ri";
 
@@ -15,87 +14,156 @@ export default function UniqueSection() {
 
   const features = [
     {
-      icon: <FaSuitcase className="text-cyan-400 text-4xl" />,
+      icon: <FaSuitcase className="text-cyan-400 text-5xl relative z-10" />,
       title: "Deep Industry Experience",
-      desc: "Over 80+ years of combined experience with Fortune 500 companies, delivering strategic, high-impact solutions.",
+      desc: "80+ years combined with Fortune 500 companies, delivering strategic, high-impact solutions.",
+      image: "/home/Deep Industry Experience.jpg",
     },
     {
-      icon: <RiCpuLine className="text-purple-400 text-4xl" />,
+      icon: <RiCpuLine className="text-purple-400 text-5xl relative z-10" />,
       title: "Technology is in Our DNA",
       desc: "Passion drives us. Innovation defines us. Our energy and focus are unmatched.",
+      image: "/home/Deep Industry Experience.jpg",
     },
     {
-      icon: <FaCogs className="text-green-400 text-4xl" />,
+      icon: <FaCogs className="text-green-400 text-5xl relative z-10" />,
       title: "Tailored, Future-Ready Solutions",
       desc: "Every solution we build is scalable, secure, and uniquely designed for your needs.",
+      image: "/home/Deep Industry Experience.jpg",
     },
     {
-      icon: <MdAnalytics className="text-blue-400 text-4xl" />,
+      icon: <MdAnalytics className="text-blue-400 text-5xl relative z-10" />,
       title: "Data-Driven Decision Making",
       desc: "Transform data into insights with advanced analytics, BI, and real-time reporting.",
+      image: "/home/Deep Industry Experience.jpg",
     },
     {
-      icon: <FaSyncAlt className="text-pink-400 text-4xl" />,
-      title: "Legacy System Modernization",
+      icon: <FaSyncAlt className="text-pink-400 text-5xl relative z-10" />,
+      title: "Legacy Modernization",
       desc: "Modernize with confidence. We bridge the gap between legacy infrastructure and modern frameworks.",
+      image: "/home/Deep Industry Experience.jpg",
     },
   ];
 
   return (
-    <section className="relative bg-gradient-to-b from-[#0f172a] via-[#1e293b] to-[#0f172a] text-white py-20 overflow-hidden">
-      {/* Glowing background orbs */}
-      <div className="absolute top-10 left-20 w-64 h-64 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute bottom-10 right-20 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl animate-bounce"></div>
-
+    <section className="relative text-white mt-16 overflow-hidden">
       <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
         {/* Title */}
         <h2
           data-aos="fade-up"
-          className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-cyan-400 via-green-400 to-purple-500 bg-clip-text text-transparent mb-6"
+          className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-6"
         >
           What makes us Unique?
         </h2>
+
         <p
           data-aos="fade-up"
           data-aos-delay="200"
-          className="text-gray-300 text-lg max-w-3xl mx-auto mb-12"
+          className="text-gray-500 dark:text-gray-300 text-lg max-w-3xl mx-auto mb-12"
         >
           We know you have plenty of options. Here’s why companies choose{" "}
-          <span className="text-cyan-400 font-semibold">BeaverTek</span>.
+          <span className="text-cyan-500 font-semibold">BeaverTek</span>.
         </p>
 
-        {/* Features grid */}
-        <div className="grid md:grid-cols-3 gap-10">
-          {features.map((item, idx) => (
+        {/* Top row → 3 cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-8">
+          {features.slice(0, 3).map((item, idx) => (
             <div
               key={idx}
               data-aos="zoom-in"
               data-aos-delay={200 * idx}
-              className="bg-[#1e293b]/60 backdrop-blur-xl rounded-2xl p-8 shadow-lg hover:shadow-cyan-500/30 transition-all duration-500 group"
+              className="group relative rounded-2xl p-8 shadow-md hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 cursor-pointer overflow-hidden"
             >
-              <div className="mb-4 flex justify-center">{item.icon}</div>
-              <h3 className="text-xl font-semibold text-white group-hover:text-cyan-400 transition-colors">
-                {item.title}
-              </h3>
-              <p className="text-gray-400 mt-3">{item.desc}</p>
+              {/* Background Image (hidden until hover) */}
+              <div
+                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                style={{
+                  backgroundImage: `url(${item.image})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              ></div>
+
+              {/* Overlay for readability */}
+              <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+              {/* Content */}
+              <div className="relative z-10">
+                <div className="mb-4 flex justify-center">
+                  <div className="p-4 rounded-full bg-gray-100 dark:bg-gray-700 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500">
+                    {item.icon}
+                  </div>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-800 dark:text-white group-hover:text-cyan-400 transition-colors duration-300">
+                  {item.title}
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400 mt-3 text-sm md:text-base leading-relaxed group-hover:text-white transition-colors duration-300">
+                  {item.desc}
+                </p>
+              </div>
+
+              {/* Glow underline */}
+              <span className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-cyan-400 via-orange-300 to-green-500 group-hover:w-full transition-all duration-500"></span>
             </div>
           ))}
         </div>
 
-        {/* CTA buttons */}
-        <div
-          data-aos="fade-up"
-          data-aos-delay="800"
-          className="mt-12 flex flex-col md:flex-row justify-center gap-6"
-        >
-          <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full text-lg font-semibold shadow-lg hover:shadow-cyan-500/50 transition-all duration-300">
-            Book a Consultation
-          </button>
-          <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full text-lg font-semibold shadow-lg hover:shadow-purple-500/50 transition-all duration-300">
-            Learn More About Our Services
-          </button>
+        {/* Bottom row → 2 cards centered */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8 py-4 md:w-2/3 mx-auto">
+          {features.slice(3).map((item, idx) => (
+            <div
+              key={idx}
+              data-aos="zoom-in"
+              data-aos-delay={600 + 200 * idx}
+              className="group relative rounded-2xl p-8 shadow-md hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 cursor-pointer overflow-hidden"
+            >
+              {/* Background Image */}
+              <div
+                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                style={{
+                  backgroundImage: `url(${item.image})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              ></div>
+
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+              {/* Content */}
+              <div className="relative z-10">
+                <div className="mb-4 flex justify-center">
+                  <div className="p-4 rounded-full bg-gray-100 dark:bg-gray-700 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500">
+                    {item.icon}
+                  </div>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-800 dark:text-white group-hover:text-cyan-400 transition-colors duration-300">
+                  {item.title}
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400 mt-3 text-sm md:text-base leading-relaxed group-hover:text-white transition-colors duration-300">
+                  {item.desc}
+                </p>
+              </div>
+
+              {/* Glow underline */}
+              <span className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-cyan-400 via-orange-300 to-green-500 group-hover:w-full transition-all duration-500"></span>
+            
+            </div>
+           
+          ))}
         </div>
+        
+        
+        <div data-aos="fade-up" data-aos-delay="1000" className=" py-8 flex justify-center gap-6" >
+         
+         <button className="px-8 py-4 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"> Book a Consultation </button> 
+         <button className="px-8 py-4 rounded-full bg-gradient-to-r from-cyan-400 to-green-500 text-white font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"> Learn More About Our Services
+ </button> </div>
+
+  
+        
       </div>
+     
     </section>
   );
 }

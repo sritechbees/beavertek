@@ -1,8 +1,8 @@
 
-import ExpertiseSection from "@/component/home/expertisesection";
+
 import HeroSection from "@/component/home/homeherosection";
 import TestimonialsSection from "@/component/home/testimonials";
-import UniqueSection from "@/component/home/uniquesection";
+
 import WhoWeAre from "@/component/home/whoweare";
 import Footer from "@/component/layout/footer";
 import Header from "@/component/layout/header";
@@ -14,9 +14,6 @@ export default function Home() {
  <Header/>
  <HeroSection/>
  <WhoWeAre/>
- <UniqueSection/>
- <ExpertiseSection/>
- <TestimonialsSection/>
  <Footer/>
     </div>
   );

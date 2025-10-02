@@ -4,7 +4,9 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import Image from "next/image";
 
 export default function Footer() {
   useEffect(() => {
@@ -12,19 +14,46 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer className="bg-gradient-to-r from-[#02142b] to-[#023e8a] text-white relative">
-      <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
-        
-        {/* Section 1 - Logo/About */}
-        <div data-aos="fade-up">
-          <h2 className="text-2xl font-bold mb-4 text-cyan-400 hover:scale-105 transition-transform duration-300">
-            Beaver HealthAI
-          </h2>
-          <p className="text-sm text-gray-300 leading-relaxed">
-            Empowering healthcare with AI-driven solutions, global expertise, 
-            and trusted innovations for a healthier tomorrow.
-          </p>
+    <footer className="relative bg-gradient-to-br from-emerald-500 via-gray-500 to-yellow-500 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 text-gray-950 overflow-hidden">
+      
+      {/* Moving Background Circles */}
+      <div className="absolute inset-0 pointer-events-none z-0">
+        <motion.div
+          animate={{ x: [0, 30, 0], opacity: [0.8, 1, 0.8] }}
+          transition={{ duration: 6, repeat: Infinity }}
+          className="absolute -top-28 -left-28 w-96 h-96 bg-yellow-300/40 rounded-full blur-3xl z-0"
+        />
+        <motion.div
+          animate={{ x: [-20, 10, -20], opacity: [0.7, 1, 0.7] }}
+          transition={{ duration: 5, repeat: Infinity }}
+          className="absolute -bottom-28 -right-28 w-[28rem] h-[28rem] bg-emerald-400/30 rounded-full blur-3xl z-0"
+        />
+        <motion.div
+          animate={{ x: [0, 20, 0], opacity: [0.6, 0.9, 0.6] }}
+          transition={{ duration: 7, repeat: Infinity }}
+          className="absolute w-72 h-72 bg-white opacity-40 rounded-full top-10 left-5 z-0"
+        />
+        <motion.div
+          animate={{ x: [-15, 15, -15], opacity: [0.5, 0.8, 0.5] }}
+          transition={{ duration: 6, repeat: Infinity }}
+          className="absolute w-52 h-52 bg-green-200 opacity-50 rounded-full bottom-10 right-10 z-0"
+        />
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 items-start">
+        {/* Section 1 - Logo */}
+        <Link href="/">
+        <div data-aos="fade-up" className="flex flex-col items-start">
+          <div className="w-28 h-28 top-16 left-20 relative mb-4">
+            <Image
+              src="/home/logo.png" // replace with your logo
+              alt="Beaver HealthAI Logo"
+              fill
+              className="object-contain"
+            />
+          </div>
         </div>
+        </Link>
 
         {/* Section 2 - Quick Links */}
         <div data-aos="fade-up" data-aos-delay="150">
@@ -72,7 +101,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-gray-700 py-4 text-center text-sm text-gray-300">
+      <div className="border-t border-gray-700 py-4 text-center text-sm text-white">
         © {new Date().getFullYear()} Beaver HealthAI. All Rights Reserved.
       </div>
     </footer>
