@@ -1,7 +1,7 @@
 
 import ExpertiseSection from "@/component/home/expertisesection";
 import HeroSection from "@/component/home/homeherosection";
-import SmartSection from "@/component/home/smartsection";
+import TestimonialsSection from "@/component/home/testimonials";
 import UniqueSection from "@/component/home/uniquesection";
 import WhoWeAre from "@/component/home/whoweare";
 import Footer from "@/component/layout/footer";
@@ -16,7 +16,7 @@ export default function Home() {
  <WhoWeAre/>
  <UniqueSection/>
  <ExpertiseSection/>
- <SmartSection/>
+ <TestimonialsSection/>
  <Footer/>
     </div>
   );

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Servicestwo() {
   return (
@@ -30,9 +31,11 @@ export default function Servicestwo() {
               At BeaverTek, Inc. we help companies launch and manage all connected smart applications, which in turn provides greater user experience, while reducing cost for Application Development.
             </li>
           </ul>
+          <Link href="/services/app_development">
           <button className="px-6 py-3 bg-gradient-to-r from-purple-600 to-purple-800 rounded-full font-semibold hover:scale-105 transition-transform duration-300">
             Explore More →
           </button>
+          </Link>
         </div>
       </div>
 

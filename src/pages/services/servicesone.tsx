@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Servicesone() {
   return (
@@ -25,9 +26,11 @@ export default function Servicesone() {
               At BeaverTek, we specialize in applications that build and transform relationships between people and technology. We deliver applications that empower employees and that engage customers, through a relentless focus on design and user experience.
             </li>
           </ul>
+          <Link href="/services/analytics_bi">
           <button className="px-6 py-3 bg-gradient-to-r from-purple-600 to-purple-800 rounded-full font-semibold hover:scale-105 transition-transform duration-300">
             Explore More →
           </button>
+          </Link>
         </div>
 
         {/* Right Image */}
