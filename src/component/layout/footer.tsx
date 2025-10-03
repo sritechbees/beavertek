@@ -21,7 +21,7 @@ export default function Footer() {
         <motion.div
           animate={{ x: [0, 30, 0], opacity: [0.8, 1, 0.8] }}
           transition={{ duration: 6, repeat: Infinity }}
-          className="absolute -top-28 -left-28 w-96 h-96 bg-yellow-300/40 rounded-full blur-3xl z-0"
+          className="absolute -top-28 -left-28 w-96 h-96 bg-emerald-300/40 rounded-full blur-3xl z-0"
         />
         <motion.div
           animate={{ x: [-20, 10, -20], opacity: [0.7, 1, 0.7] }}
@@ -31,7 +31,7 @@ export default function Footer() {
         <motion.div
           animate={{ x: [0, 20, 0], opacity: [0.6, 0.9, 0.6] }}
           transition={{ duration: 7, repeat: Infinity }}
-          className="absolute w-72 h-72 bg-white opacity-40 rounded-full top-10 left-5 z-0"
+          className="absolute w-72 h-72 bg-emerald-300 opacity-40 rounded-full top-10 left-5 z-0"
         />
         <motion.div
           animate={{ x: [-15, 15, -15], opacity: [0.5, 0.8, 0.5] }}
