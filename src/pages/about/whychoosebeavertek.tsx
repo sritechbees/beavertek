@@ -1,3 +1,4 @@
+
 "use client";
 
 import { motion } from "framer-motion";
@@ -9,32 +10,22 @@ import App_layout from "@/component/layout/app_layout";
 import AboutThird from "./aboutthird";
 import WeExist from "./weexist";
 import AboutHeroSection from "./aboutherosection";
+import Services from "@/component/common/services";
 
 export default function WhyChooseBeaverTek() {
   useEffect(() => {
     AOS.init({ duration: 1200, once: true });
   }, []);
 
-  const services = [
-    "Advanced Analytics",
-    "AI & AI Agents",
-    "Business Intelligence & Reporting",
-    "Data Integration",
-    "Application Development",
-    "Mobile Applications",
-    "Database Design & Performance Tuning",
-    "Maintenance & Support Services",
-    "Quality Assurance",
-  ];
-
   return (
     <App_layout>
       <AboutHeroSection />
 
       {/* Intro Section */}
-      <section className=" relative bg-[#0f172a] text-white py-20 px-6 md:px-20 overflow-hidden">
-        <div className="absolute top-10 left-10 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-10 right-10 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-bounce"></div>
+      <section className="relative bg-gradient-to-br from-emerald-50 via-white to-yellow-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 text-white py-20 px-6 md:px-12 overflow-hidden">
+        {/* Background Blobs */}
+         <div className="absolute -top-28 -left-28 w-96 h-96 bg-yellow-300/40 rounded-full blur-3xl animate-pulse pointer-events-none" />
+        <div className="absolute -bottom-28 -right-28 w-[28rem] h-[28rem] bg-emerald-400/30 rounded-full blur-3xl animate-pulse pointer-events-none" />
 
         <div className="relative z-10 max-w-6xl mx-auto text-center">
           <motion.h2
@@ -48,7 +39,7 @@ export default function WhyChooseBeaverTek() {
 
           <motion.p
             data-aos="fade-up"
-            className="mt-8 text-lg md:text-xl text-gray-300 leading-relaxed"
+            className="mt-8 text-lg md:text-xl text-gray-950 leading-relaxed overflow-hidden"
           >
             BeaverTek is a passionate and forward-thinking IT services provider
             based in Orange County, California, with an extended presence in
@@ -61,7 +52,7 @@ export default function WhyChooseBeaverTek() {
           <motion.p
             data-aos="fade-up"
             data-aos-delay="200"
-            className="mt-6 text-lg text-gray-300 leading-relaxed"
+            className="mt-6 text-lg text-gray-950 leading-relaxed overflow-hidden"
           >
             What sets us apart is more than just our technical proficiency—
             technology is in our DNA. It fuels our contagious energy, drives our
@@ -69,70 +60,78 @@ export default function WhyChooseBeaverTek() {
             that truly make a difference.
           </motion.p>
         </div>
-      </section>
+         <Services />
+     
+     
 
-      {/* Services Grid */}
-      <section className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900  py-20 px-6 md:px-20">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {services.map((service, index) => (
-            <motion.div
-              key={index}
-              data-aos="zoom-in"
-              data-aos-delay={index * 100}
-              className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-xl p-6 flex flex-col items-center text-center hover:scale-105 transition-transform duration-300"
-            >
-              <Image
-                src={`/services/${index + 1}.svg`}
-                alt={service}
-                width={60}
-                height={60}
-                className="mb-4"
-              />
-              <h3 className="text-lg font-semibold text-white">{service}</h3>
-            </motion.div>
-          ))}
-        </div>
-      </section>
-
-      {/* Partner + Mission Section */}
-      <section className="bg-white py-20 px-6 md:px-20">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-          {/* Partner Info */}
-          <div>
-            <motion.h3
-              data-aos="fade-right"
-              className="text-2xl md:text-3xl font-bold text-gray-900"
-            >
-              Partnering with ProPlus Open Layer Framework
-            </motion.h3>
-            <p
-              data-aos="fade-left"
-              className="mt-4 text-gray-600 text-lg leading-relaxed"
-            >
-              We proudly partner with the ProPlus Open Layer framework to
-              support and modernize legacy applications, ensuring a seamless
-              transition into future-ready systems.
-            </p>
-          </div>
-
-          {/* Mission Block */}
-          <motion.div
+     
+      
+       
+        <div className="relative z-10 max-w-6xl mx-auto text-center">
+          <motion.p
             data-aos="fade-up"
-            className="bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-3xl shadow-xl p-10"
+            className="mt-8 text-lg md:text-xl text-gray-950 leading-relaxed overflow-hidden"
           >
-            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-              Our Mission
-            </h3>
-            <p className="text-lg md:text-xl text-white leading-relaxed">
-              Empower our clients with accurate, actionable data—anytime,
-              anywhere—so they can thrive in a data-driven world.
+            We proudly partner with the ProPlus Open Layer framework to support
+            and modernize legacy applications, ensuring a seamless transition
+            into future-ready systems.
+          </motion.p>
+
+          <motion.p
+            data-aos="fade-up"
+            data-aos-delay="200"
+            className="mt-6 text-lg text-gray-950 leading-relaxed overflow-hidden"
+          >
+            Every solution we craft is designed to be scalable, robust, and
+            perfectly aligned with the client’s specific business needs. By
+            leveraging agile methodologies and industry best practices, we
+            deliver timely, reliable, and impactful technology solutions.
+          </motion.p>
+        </div>
+     
+       <div className="relative z-10 max-w-7xl mx-auto py-8 mt-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          
+          
+           {/* Right Side Image */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="flex justify-center"
+          >
+            <Image
+              src="/about/our mission.jpg"
+              alt="BeaverTek Mission"
+              width={500}
+              height={400}
+              className="rounded-2xl shadow-lg"
+            />
+          </motion.div>
+          {/* Left Side Text */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+            Our mission is simple yet powerful
+            </h2>
+            <p className="mt-6 text-lg text-gray-950 leading-relaxed">
+              Empower our clients with accurate, actionable data anytime,
+              anywhere so they can thrive in a data-driven world.
             </p>
           </motion.div>
         </div>
+      
+
+      {/* Additional Sections */}
+      <WeExist />
+       <AboutThird />
       </section>
-       <WeExist />
-      <AboutThird />
      
     </App_layout>
   );
 }
+

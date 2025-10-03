@@ -11,14 +11,25 @@ export default function AboutHeroSection() {
   }, []);
 
   return (
-    <section className="relative bg-gradient-to-b from-[#0f172a] via-[#1e293b] to-[#0f172a] text-white py-16 px-6 md:py-20 overflow-hidden">
-  
-      {/* Background Glow Effects (responsive, no overflow) */}
-      <div className="absolute top-10 left-1/2 -translate-x-1/2 w-2/3 max-w-md aspect-square bg-cyan-500/20 rounded-full blur-3xl animate-pulse pointer-events-none"></div>
-      <div className="absolute bottom-10 right-1/2 translate-x-1/2 w-2/3 max-w-lg aspect-square bg-purple-500/20 rounded-full blur-3xl animate-pulse pointer-events-none"></div>
+    <section className="relative bg-gradient-to-b from-[#0f172a] via-[#1e293b] to-[#0f172a] text-white px-6 md:py-12 overflow-hidden">
+
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/about/Digital.jpg" // Replace with your image path
+          alt="Background"
+          fill
+          className="object-cover object-center opacity-30"
+        />
+      </div>
+
+      {/* Background Animated Blobs */}
+      <div className="absolute top-10 left-1/3 w-96 h-96 bg-cyan-500/30 rounded-full blur-3xl animate-blob animation-delay-2000 pointer-events-none"></div>
+      <div className="absolute top-20 right-1/4 w-72 h-72 bg-purple-500/30 rounded-full blur-3xl animate-blob animation-delay-4000 pointer-events-none"></div>
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-80 h-80 bg-pink-500/20 rounded-full blur-3xl animate-blob animation-delay-3000 pointer-events-none"></div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Section Label */}
         <p
           data-aos="fade-down"
@@ -30,30 +41,18 @@ export default function AboutHeroSection() {
         {/* Hero Title */}
         <h1
           data-aos="fade-up"
-          className="text-3xl sm:text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-cyan-400 via-green-400 to-purple-500 bg-clip-text text-transparent mb-6"
+          className="text-3xl sm:text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-cyan-400 via-green-400 to-purple-500 bg-clip-text text-transparent mb-4"
         >
-          Empowering Innovation with Integrity
+          Empowering Innovation
         </h1>
 
-        {/* Company Name */}
-        <h2
-          data-aos="fade-up"
-          data-aos-delay="100"
-          className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-6"
-        >
-          BeaverTek IT Services
-        </h2>
-
-        {/* Description */}
+        {/* Description (2 lines only) */}
         <p
           data-aos="fade-up"
           data-aos-delay="200"
-          className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto px-2"
+          className="text-lg sm:text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto px-2 overflow-hidden text-ellipsis line-clamp-2"
         >
-          We are a forward-thinking Managed IT Services provider based in Orange County, California.
-          With over 80 years of combined experience serving Fortune 500 companies, our team brings
-          deep expertise, passion, and a relentless drive to deliver scalable, secure, and impactful
-          solutions.
+          We deliver scalable, secure IT solutions with expertise and integrity for Fortune 500 clients.
         </p>
 
         {/* Company Logo */}
@@ -63,7 +62,7 @@ export default function AboutHeroSection() {
           className="mt-10 flex justify-center"
         >
           <Image
-            src="/home/logo.png" // Update with your actual logo path
+            src="/home/logo.png" // Update with your logo
             alt="BeaverTek Logo"
             width={110}
             height={110}
@@ -85,6 +84,27 @@ export default function AboutHeroSection() {
           </button>
         </div>
       </div>
+
+      {/* Blob Animation Keyframes */}
+      <style jsx>{`
+        @keyframes blob {
+          0%, 100% { transform: translate(0px, 0px) scale(1); }
+          33% { transform: translate(30px, -20px) scale(1.1); }
+          66% { transform: translate(-20px, 20px) scale(0.9); }
+        }
+        .animate-blob {
+          animation: blob 8s infinite;
+        }
+        .animation-delay-2000 { animation-delay: 2s; }
+        .animation-delay-3000 { animation-delay: 3s; }
+        .animation-delay-4000 { animation-delay: 4s; }
+        .line-clamp-2 {
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+      `}</style>
     </section>
   );
 }

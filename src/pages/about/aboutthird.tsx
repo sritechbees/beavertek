@@ -12,7 +12,7 @@ export default function AboutThird() {
   }, []);
 
   return (
-    <section className="relative bg-gradient-to-br from-gray-50 via-white to-gray-100 py-16 px-6 md:px-20">
+    <section className="relative mt-16 px-6">
       {/* Section Title */}
       <motion.h2
         initial={{ opacity: 0, y: -30 }}
