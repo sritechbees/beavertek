@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Image from "next/image";
-import BeaverTekCustomersV2 from "./beavertekcustomer";
+
 import App_layout from "@/component/layout/app_layout";
 import Link from "next/link";
 
@@ -90,7 +90,7 @@ export default function CustomersHeroSection() {
           {/* CTA Button */}
           <Link href="/customers/beavertekcustomer">
           <div data-aos="fade-up" data-aos-delay="600" className="mt-10">
-            <button className="px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-700 rounded-full text-[19px] font-semibold shadow-lg hover:shadow-blue-500/50 transition-all duration-300 group">
+            <button className="px-6 py-3  bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full text-[19px] font-semibold shadow-lg hover:shadow-blue-500/50 transition-all duration-300 group">
               Explore Customer Stories
               <span className="ml-2 inline-block transform group-hover:translate-x-1 transition-transform">
                 →

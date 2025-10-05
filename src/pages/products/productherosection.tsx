@@ -84,7 +84,7 @@ export default function ProductHeroSection() {
           {/* CTA Button */}
           <Link href="/products/openlayer">
           <div data-aos="fade-up" data-aos-delay="600" className="mt-10">
-            <button className="px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full text-lg font-semibold shadow-lg hover:shadow-blue-500/50 transition-all duration-300 group">
+            <button className="px-6 py-3  bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full text-lg font-semibold shadow-lg hover:shadow-blue-500/50 transition-all duration-300 group">
               Explore Features
               <span className="ml-2 inline-block transform group-hover:translate-x-1 transition-transform">
                 →

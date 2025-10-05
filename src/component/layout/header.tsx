@@ -21,7 +21,7 @@ const Header: React.FC = () => {
   // Menu links
   const menuLinks = [
     { name: "Home", href: "/" },
-    { name: "About", href: "/about/whychoosebeavertek" },
+    { name: "About", href: "/about/aboutherosection" },
     { name: "Customers", href: "/customers/customerherosection" },
     { name: "Services", href: "/services/servicesherosection" },
     { name: "Products", href: "/products/productherosection" },

@@ -24,7 +24,7 @@ ease: "easeOut",
 }),
 };
 
-return ( <section className="relative px-6 "> <div className="max-w-7xl mx-auto mt-10 grid md:grid-cols-2 gap-12 items-center">
+return ( <section className="relative px-6 "> <div className="max-w-7xl mx-auto mt-8 grid md:grid-cols-2 gap-12 items-center">
 {/* Left Side */}
 <motion.div
 data-aos="fade-right"
@@ -35,9 +35,9 @@ className="space-y-6 text-gray-700 text-lg leading-relaxed"
 initial={{ opacity: 0, y: -30 }}
 animate={{ opacity: 1, y: 0 }}
 transition={{ duration: 0.8 }}
-className="text-4xl md:text-5xl font-bold"
-> <span className="bg-gradient-to-r from-cyan-400 via-green-400 to-purple-500 bg-clip-text text-transparent">
-We Exist to </span>{" "} <span className="text-gray-900">Serve Our Clients</span>
+className="text-3xl md:text-4xl text-gray-950 font-bold"
+> 
+We Exist to Serve Our Clients
 </motion.h2>
 
 

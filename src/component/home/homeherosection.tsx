@@ -69,7 +69,7 @@ export default function HeroSection() {
         {/* Heading */}
         <h1
           data-aos="fade-up"
-          className="text-3xl sm:text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-cyan-400 via-green-400 to-purple-500 bg-clip-text text-transparent leading-tight"
+          className="text-3xl sm:text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-blue-400 via-cyan-400 to-indigo-500 bg-clip-text text-transparent leading-tight"
         >
           Empowering Businesses <br /> with Tailored IT Solutions
         </h1>

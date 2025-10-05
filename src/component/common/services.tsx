@@ -75,7 +75,7 @@ function Services() {
             initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-4xl md:text-4xl mb-12 text-center font-bold bg-gradient-to-r from-cyan-400 via-green-400 to-purple-500 bg-clip-text text-transparent"
+            className="text-3xl md:text-4xl mb-20 text-center font-bold b bg-clip-text"
           >
            At BeaverTek, we specialize in :
           </motion.h2>
@@ -86,7 +86,7 @@ function Services() {
             key={index}
             whileHover={{ scale: 1.1, rotate: 360 }}
             transition={{ duration: 2 }}
-            className={`relative group cursor-pointer overflow-hidden ${feature.flowerClass} shadow-2xl bg-gradient-to-tr from-green-400 to-purple-200`}
+            className={`relative group cursor-pointer overflow-hidden ${feature.flowerClass} shadow-2xl bg-gradient-to-tr from-blue-300 to-cyan-100`}
             style={{
               borderRadius: "50% 20% / 30% 40%",
               padding: "3rem",
@@ -101,7 +101,7 @@ function Services() {
 
             {/* Overlay Content */}
             <div className="absolute inset-0  bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-4">
-              <h2 className="text-xl font-semibold text-orange-500 w-60 text-center mb-2">
+              <h2 className="text-xl font-semibold text-blue-500 w-60 text-center mb-2">
                 {feature.title}
               </h2>
               <p className=" w-64 text-white font-medium text-center">{feature.description}</p>

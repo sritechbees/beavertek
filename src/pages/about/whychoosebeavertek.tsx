@@ -1,4 +1,3 @@
-
 "use client";
 
 import { motion } from "framer-motion";
@@ -19,27 +18,25 @@ export default function WhyChooseBeaverTek() {
 
   return (
     <App_layout>
-      <AboutHeroSection />
+      
 
       {/* Intro Section */}
-      <section className="relative bg-gradient-to-br from-emerald-50 via-white to-yellow-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 text-white py-20 px-6 md:px-12 overflow-hidden">
-        {/* Background Blobs */}
-         <div className="absolute -top-28 -left-28 w-96 h-96 bg-yellow-300/40 rounded-full blur-3xl animate-pulse pointer-events-none" />
-        <div className="absolute -bottom-28 -right-28 w-[28rem] h-[28rem] bg-emerald-400/30 rounded-full blur-3xl animate-pulse pointer-events-none" />
-
+      <section className="relative bg-gradient-to-r from-blue-50 via-blue-50 to-blue-50 py-12 px-6 md:px-12 overflow-hidden">
         <div className="relative z-10 max-w-6xl mx-auto text-center">
-          <motion.h2
-            initial={{ opacity: 0, y: -30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-cyan-400 via-green-400 to-purple-500 bg-clip-text text-transparent"
+          <motion.h1
+            initial={{ opacity: 0, y: -20, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="text-3xl md:text-5xl font-extrabold bg-clip-text text-transparent 
+                       bg-gradient-to-r from-blue-600 to-gray-900 dark:from-cyan-400 dark:to-white 
+                       drop-shadow-lg leading-snug"
           >
             Innovative IT Services with a Purpose-Driven Mission
-          </motion.h2>
+          </motion.h1>
 
           <motion.p
             data-aos="fade-up"
-            className="mt-8 text-lg md:text-xl text-gray-950 leading-relaxed overflow-hidden"
+            className="mt-8 text-base md:text-lg lg:text-xl text-gray-800 dark:text-gray-200 leading-relaxed max-w-4xl mx-auto"
           >
             BeaverTek is a passionate and forward-thinking IT services provider
             based in Orange County, California, with an extended presence in
@@ -52,7 +49,7 @@ export default function WhyChooseBeaverTek() {
           <motion.p
             data-aos="fade-up"
             data-aos-delay="200"
-            className="mt-6 text-lg text-gray-950 leading-relaxed overflow-hidden"
+            className="mt-6 text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed max-w-3xl mx-auto"
           >
             What sets us apart is more than just our technical proficiency—
             technology is in our DNA. It fuels our contagious energy, drives our
@@ -60,17 +57,17 @@ export default function WhyChooseBeaverTek() {
             that truly make a difference.
           </motion.p>
         </div>
-         <Services />
-     
-     
 
-     
-      
-       
-        <div className="relative z-10 max-w-6xl mx-auto text-center">
+        {/* Services Section */}
+        <div className="mt-8">
+          <Services />
+        </div>
+
+        {/* Partner Section */}
+        <div className="relative z-10 max-w-6xl mx-auto text-center mt-16">
           <motion.p
             data-aos="fade-up"
-            className="mt-8 text-lg md:text-xl text-gray-950 leading-relaxed overflow-hidden"
+            className="text-base md:text-lg lg:text-xl text-gray-800 dark:text-gray-200 leading-relaxed max-w-4xl mx-auto"
           >
             We proudly partner with the ProPlus Open Layer framework to support
             and modernize legacy applications, ensuring a seamless transition
@@ -80,7 +77,7 @@ export default function WhyChooseBeaverTek() {
           <motion.p
             data-aos="fade-up"
             data-aos-delay="200"
-            className="mt-6 text-lg text-gray-950 leading-relaxed overflow-hidden"
+            className="mt-6 text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed max-w-3xl mx-auto"
           >
             Every solution we craft is designed to be scalable, robust, and
             perfectly aligned with the client’s specific business needs. By
@@ -88,10 +85,9 @@ export default function WhyChooseBeaverTek() {
             deliver timely, reliable, and impactful technology solutions.
           </motion.p>
         </div>
-     
-       <div className="relative z-10 max-w-7xl mx-auto py-8 mt-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          
-          
+
+        {/* Mission Section */}
+        <div className="relative z-10 max-w-7xl mx-auto py-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
            {/* Right Side Image */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
@@ -105,7 +101,7 @@ export default function WhyChooseBeaverTek() {
               alt="BeaverTek Mission"
               width={500}
               height={400}
-              className="rounded-2xl shadow-lg"
+              className="rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-500"
             />
           </motion.div>
           {/* Left Side Text */}
@@ -114,24 +110,30 @@ export default function WhyChooseBeaverTek() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+            className="text-center lg:text-left"
           >
-            <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
-            Our mission is simple yet powerful
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-950 bg-clip-text">
+              Our Mission
             </h2>
-            <p className="mt-6 text-lg text-gray-950 leading-relaxed">
+            <p className="mt-6 text-base md:text-lg text-gray-800 dark:text-gray-200 leading-relaxed">
+              At BeaverTek, we focus on giving clients precise and reliable data.
+We ensure this information is accessible whenever and wherever they need it.
+Our goal is to enable smarter decisions and drive meaningful growth.
+Ultimately, we help businesses succeed in an increasingly data-driven world.
+            </p>
+            <p className="mt-6 text-base md:text-lg text-gray-800 dark:text-gray-200 leading-relaxed">
               Empower our clients with accurate, actionable data anytime,
               anywhere so they can thrive in a data-driven world.
             </p>
           </motion.div>
-        </div>
-      
 
-      {/* Additional Sections */}
-      <WeExist />
-       <AboutThird />
+         
+        </div>
+
+        {/* Additional Sections */}
+        <WeExist />
+        <AboutThird />
       </section>
-     
     </App_layout>
   );
 }
-

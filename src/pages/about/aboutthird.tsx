@@ -12,13 +12,13 @@ export default function AboutThird() {
   }, []);
 
   return (
-    <section className="relative mt-16 px-6">
+    <section className="relative mt-16 py-8 px-6">
       {/* Section Title */}
       <motion.h2
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-3xl md:text-5xl font-bold text-center text-gray-900"
+        className="text-3xl md:text-4xl font-bold text-center text-gray-900"
       >
         It Makes Sense
       </motion.h2>
@@ -26,7 +26,7 @@ export default function AboutThird() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 0.3 }}
-        className="text-lg md:text-xl text-center text-gray-600 mt-3"
+        className="text-lg md:text-xl text-center text-gray-700 mt-3"
       >
         Aligning Strategy with Purpose for Meaningful Impact
       </motion.p>

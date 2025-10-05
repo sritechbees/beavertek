@@ -71,7 +71,7 @@ export default function ServicesHeroSection() {
         {/* CTA Button */}
         <Link href="/services/servicesone">
         <div data-aos="fade-up" data-aos-delay="600" className="mt-10">
-           <button className="px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-700 rounded-full text-[19px] font-semibold shadow-lg hover:shadow-blue-500/50 transition-all duration-300 group">
+           <button className="px-6 py-3  bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full text-[19px] font-semibold shadow-lg hover:shadow-blue-500/50 transition-all duration-300 group">
               Explore Customer
               <span className="ml-2 inline-block transform group-hover:translate-x-1 transition-transform">
                 →
