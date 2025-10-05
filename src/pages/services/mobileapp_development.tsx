@@ -11,11 +11,8 @@ export default function MobileAppDevelopment() {
   }, []);
 
   return (
-    <section className="relative w-full overflow-hidden bg-gradient-to-br from-blue-50 via-white to-indigo-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-24">
-      {/* Background Blobs */}
-      <div className="absolute -top-28 -left-28 w-96 h-96 bg-indigo-300/40 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute -bottom-28 -right-28 w-[28rem] h-[28rem] bg-blue-400/30 rounded-full blur-3xl animate-pulse" />
-
+    <section className="relative w-full overflow-hidden bg-gradient-to-r from-blue-50 via-blue-50 to-blue-50 py-16">
+   
       {/* Container */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-16 grid md:grid-cols-2 gap-12 items-center overflow-visible">
         {/* Left Content */}
@@ -23,13 +20,13 @@ export default function MobileAppDevelopment() {
           <span className="text-sm font-semibold tracking-wide text-indigo-500 uppercase">
             Mobile Application
           </span>
-          <h2 className="mt-4 text-4xl md:text-5xl font-bold leading-snug">
+          <h2 className="mt-4 text-3xl md:text-4xl font-bold leading-snug">
             Mobile Application Development
           </h2>
-          <p className="mt-6 text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-lg">
+          <p className="text-gray-700 text-base sm:text-lg md:text-lg dark:text-gray-300 mb-4 leading-relaxed mt-4">
             BeaverTek Inc., as an industry expert who has experience as a mobile application developer, has identified the top best practices to follow through in the development process for your application. Convenience, speed, and experience is the mantra behind Mobile Application Development at BeaverTek.
           </p>
-          <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-lg">
+          <p className="text-gray-700 text-base sm:text-lg md:text-lg dark:text-gray-300 mb-4 leading-relaxed">
             We help our clients find the best ways to design, develop, and deploy the app. We have the expertise and experience to work with our clients in the app development process from start to finish. We take mobile application development very seriously. Creating unique, rich, and immersive UX experiences for the app is our focus and passion.
           </p>
         </div>

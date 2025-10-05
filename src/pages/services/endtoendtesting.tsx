@@ -2,62 +2,72 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const EndToEndTesting = () => {
-  return (
-    <section className="relative w-full bg-gradient-to-br from-green-50 via-white to-green-100 py-24 overflow-hidden">
-      {/* Background Blobs */}
-      <div className="absolute -top-28 -left-28 w-96 h-96 bg-green-300/30 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute -bottom-28 -right-28 w-[28rem] h-[28rem] bg-emerald-400/30 rounded-full blur-3xl animate-pulse" />
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
 
-      <div className="relative z-10 container mx-auto px-6 lg:px-16 flex flex-col lg:flex-row items-center gap-12">
-        
-        {/* Left Side Text */}
+  return (
+    <section className="relative w-full bg-gradient-to-r from-blue-50 via-blue-50 to-blue-50 py-12 overflow-hidden">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+        {/* Left Side Images */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
-          className="lg:w-1/2 text-gray-700 space-y-4"
+          data-aos="fade-right"
+          className="relative flex justify-center lg:justify-start items-center gap-6"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            End-to-End Testing
-          </h2>
-          <p>
-            During development, every software product is tested multiple times to verify that all the functions work correctly, that the solution complies with performance requirements, that the GUI ensures superior quality of experience on all devices, etc.
-          </p>
-          <p>
-            However, in some cases successful completion of these tests is not enough to make a user’s entire journey through the application trouble-free. This is where end-to-end testing comes into play.
-          </p>
-          <p>
-            Our Quality Assurance and testing teams use test scenarios that simulate real user behavior and involve all integrated components such as interfaces, databases, network, external systems, and other applications.
-          </p>
+          {/* Rectangular Image */}
+          <div className="relative w-[280px] h-[380px] lg:w-[340px] lg:h-[440px] rounded-2xl overflow-hidden shadow-2xl animate-float z-20">
+            <Image
+              src="/services/end to end testing.jpg"
+              alt="End-to-End Main"
+              fill
+              className="object-cover"
+            />
+          </div>
+
+          {/* Circular Image */}
+          <div className="relative w-[200px] h-[200px] lg:w-[240px] lg:h-[240px] rounded-full overflow-hidden shadow-xl animate-float-fast z-10 -translate-y-12">
+            <Image
+              src="/services/end to end testing1.jpg"
+              alt="End-to-End Side"
+              fill
+              className="object-cover"
+            />
+          </div>
         </motion.div>
 
-        {/* Right Side Image */}
+        {/* Right Side Text */}
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
-          className="lg:w-1/2 flex justify-center lg:justify-end relative overflow-visible"
+          data-aos="fade-left"
+          className="text-gray-700 space-y-5"
         >
-          <div className="relative w-[320px] h-[400px] lg:w-[360px] lg:h-[460px] rounded-2xl shadow-2xl overflow-hidden animate-float">
-            <Image
-              src="/services/end to end testing.jpg" // Replace with your image
-              alt="End-to-End Testing"
-              fill
-              className="object-cover"
-            />
-          </div>
-
-          {/* Optional Overlapping Secondary Image */}
-          <div className="absolute -right-10 -bottom-12 w-[220px] h-[300px] lg:w-[260px] lg:h-[340px] rounded-2xl shadow-xl overflow-hidden animate-float-fast z-20">
-            <Image
-              src="/services/end to end testing.jpg" // Replace with secondary image
-              alt="Testing Scenario"
-              fill
-              className="object-cover"
-            />
-          </div>
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+            End-to-End Testing
+          </h2>
+          <p className="ext-gray-700 text-base sm:text-lg md:text-lg dark:text-gray-300 mb-4 leading-relaxed mt-4">
+            During development, every software product is tested multiple times to
+            verify that all functions work correctly, that performance requirements
+            are met, and that the GUI ensures a superior user experience.
+          </p>
+          <p className="ext-gray-700 text-base sm:text-lg md:text-lg dark:text-gray-300 mb-4 leading-relaxed mt-4">
+            Sometimes, passing these tests isn’t enough to make the user journey
+            flawless. That’s where end-to-end testing comes in.
+          </p>
+          <p className="ext-gray-700 text-base sm:text-lg md:text-lg dark:text-gray-300 mb-4 leading-relaxed mt-4">
+            Our QA teams simulate real user behavior covering all integrated components,
+            such as interfaces, databases, networks, external systems, and other applications.
+          </p>
         </motion.div>
       </div>
 
@@ -67,12 +77,29 @@ const EndToEndTesting = () => {
           animation: float 6s ease-in-out infinite;
         }
         .animate-float-fast {
-          animation: float 4s ease-in-out infinite;
+          animation: float-fast 5s ease-in-out infinite;
         }
         @keyframes float {
-          0% { transform: translateY(0px); }
-          50% { transform: translateY(-15px); }
-          100% { transform: translateY(0px); }
+          0% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(-15px);
+          }
+          100% {
+            transform: translateY(0px);
+          }
+        }
+        @keyframes float-fast {
+          0% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(-10px);
+          }
+          100% {
+            transform: translateY(0px);
+          }
         }
       `}</style>
     </section>

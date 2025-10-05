@@ -2,76 +2,85 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Servicestwo() {
+  useEffect(() => {
+    AOS.init({ duration: 1200, once: true, easing: "ease-in-out" });
+  }, []);
+
   return (
-    <section className="bg-gradient-to-br from-purple-900 via-slate-800 to-blue-900 text-white py-20 px-6 overflow-hidden">
+    <section className="bg-gradient-to-r from-blue-50 via-blue-50 to-blue-50 text-gray-950 py-16 px-6 overflow-hidden">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         {/* Left Image */}
-        <div className="opacity-0 animate-fade-in-slow animation-delay-200">
+        <motion.div
+          initial={{ opacity: 0, x: -40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+          data-aos="fade-right"
+          className="flex justify-center"
+        >
           <Image
-            src="/SERVICES/Application Development.jpg" // Replace with your actual image path
-            alt="Collaborative Workspace"
+            src="/services/Application Development.jpg"
+            alt="Application Development"
             width={600}
             height={400}
-            className="rounded-xl shadow-xl"
+            className="rounded-xl shadow-xl hover:scale-105 transition-transform duration-500"
           />
-        </div>
+        </motion.div>
 
         {/* Right Content */}
-        <div className="opacity-0 animate-slide-up animation-delay-100">
-          <h1 className="text-3xl md:text-4xl font-bold mb-4">
-            Application Development
+        <motion.div
+          initial={{ opacity: 0, x: 40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+          data-aos="fade-left"
+        >
+          {/* Half Gray + Half Blue Heading */}
+          <h1
+            className="text-3xl md:text-4xl font-bold mb-6"
+            data-aos="zoom-in"
+          >
+            <span className="text-gray-950">Application</span>{" "}
+            <span className="text-blue-500">Development</span>
           </h1>
-          <ul className="space-y-4 text-slate-200 text-base leading-relaxed mb-8 list-disc list-inside">
+
+          <ul
+            className="space-y-4 text-gray-700 text-base sm:text-lg leading-relaxed mb-8"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <li>
-              At the moment many businesses want to develop and manage applications themselves, thus minimizing the dependency on outside IT teams.
+              At the moment many businesses want to develop and manage
+              applications themselves, thus minimizing the dependency on outside
+              IT teams.
             </li>
             <li>
-              At BeaverTek, Inc. we help companies launch and manage all connected smart applications, which in turn provides greater user experience, while reducing cost for Application Development.
+              At BeaverTek, Inc. we help companies launch and manage all
+              connected smart applications, which in turn provides greater user
+              experience, while reducing cost for Application Development.
             </li>
           </ul>
-          <Link href="/services/app_development">
-          <button className="px-6 py-3 bg-gradient-to-r from-purple-600 to-purple-800 rounded-full font-semibold hover:scale-105 transition-transform duration-300">
-            Explore More →
-          </button>
-          </Link>
-        </div>
-      </div>
 
-      {/* Tailwind animation styles */}
-      <style jsx>{`
-        .animate-fade-in-slow {
-          animation: fadeIn 1.5s ease-out forwards;
-        }
-        .animate-slide-up {
-          animation: slideUp 1s ease-out forwards;
-        }
-        .animation-delay-100 {
-          animation-delay: 0.1s;
-        }
-        .animation-delay-200 {
-          animation-delay: 0.2s;
-        }
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-          }
-          to {
-            opacity: 1;
-          }
-        }
-        @keyframes slideUp {
-          from {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-      `}</style>
+          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <Link href="/services/app_development">
+              <button
+                className="px-6 py-3 text-base sm:text-lg bg-gradient-to-r from-blue-400 to-blue-500 
+                rounded-full font-semibold text-white shadow-lg hover:shadow-blue-500/50 
+                hover:scale-105 transition-all duration-300 group"
+                data-aos="zoom-in"
+              >
+                Explore More →
+              </button>
+            </Link>
+          </motion.div>
+        </motion.div>
+      </div>
     </section>
   );
 }

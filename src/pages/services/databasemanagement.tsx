@@ -2,76 +2,65 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const DatabaseManagement = () => {
-  return (
-    <section className="relative w-full bg-gradient-to-br from-teal-50 via-white to-teal-100 py-24 overflow-hidden">
-      {/* Background Decorative Blobs */}
-      <div className="absolute -top-28 -left-28 w-96 h-96 bg-teal-300/30 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute -bottom-28 -right-28 w-[28rem] h-[28rem] bg-teal-400/30 rounded-full blur-3xl animate-pulse" />
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
 
-      <div className="relative z-10 container mx-auto px-6 lg:px-16 flex flex-col lg:flex-row items-center gap-12">
-        
-        {/* Left Side Text */}
+  return (
+    <section className="relative w-full bg-gradient-to-r from-blue-50 via-blue-50 to-blue-50 py-12 overflow-hidden">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-16 flex flex-col lg:flex-row items-center justify-between gap-12">
+
+        {/* Left Side Image */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
-          className="lg:w-1/2 text-gray-700 space-y-4"
+          data-aos="fade-right"
+          className="lg:w-1/2 flex justify-center lg:justify-start items-center"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Database Management Services
-          </h2>
-          <p>
-            We believe a reliable and high-performance Database is one of the key elements in ensuring that mission-critical applications are up and running and IT Services are accessible to perform desired business tasks. Maintenance and Support Services Engineers at BeaverTek work hard to keep databases accessible round the clock.
-          </p>
-          <p>
-            BeaverTek Database Infrastructure Maintenance and Support Services includes proactive monitoring, upgrades, builds, performance optimization, disaster recovery, and security. We provide expert database management services for Oracle, SQL Server, MySQL, Netezza, and Teradata environments with an expert level of service, support, and affordability.
-          </p>
-          <p>
-            By combining strong tools and processes, we can build models that are cost-effective and provide access to our DBA experts in the delivery of our database management services.
-          </p>
-        </motion.div>
-
-        {/* Right Side Image */}
-        <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
-          className="lg:w-1/2 flex justify-center lg:justify-end relative overflow-visible"
-        >
-          <div className="relative w-[320px] h-[400px] lg:w-[360px] lg:h-[460px] rounded-2xl shadow-2xl overflow-hidden animate-float">
+          <div className="relative w-[380px] h-[440px] lg:w-[480px] lg:h-[350px] overflow-hidden shadow-2xl animate-float rounded-r-full">
             <Image
-              src="/services/Database Management Services.jpg" // Replace with your image
-              alt="Database Management Services"
-              fill
-              className="object-cover"
-            />
-          </div>
-
-          {/* Optional Secondary Overlapping Image */}
-          <div className="absolute -right-10 -bottom-12 w-[220px] h-[300px] lg:w-[260px] lg:h-[340px] rounded-2xl shadow-xl overflow-hidden animate-float-fast z-20">
-            <Image
-              src="/services/Database Management Services.jpg" // Replace with your secondary image
+              src="/services/Database Management Services.jpg"
               alt="Database Management"
               fill
-              className="object-cover"
+              className="object-cove"
             />
           </div>
+        </motion.div>
+
+        {/* Right Side Text */}
+        <motion.div
+          initial={{ opacity: 0, x: 50, scale: 0.95 }}
+          whileInView={{ opacity: 1, x: 0, scale: 1 }}
+          transition={{ duration: 1 }}
+          data-aos="fade-left"
+          className="lg:w-1/2 text-gray-700 space-y-5"
+        >
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+            Database Management Services
+          </h2>
+          <p className="ext-gray-700 text-base sm:text-md md:text-md dark:text-gray-300 mb-4 leading-relaxed mt-4">
+            We ensure mission-critical databases are highly reliable and accessible. Our team provides monitoring, maintenance, and expert support for databases like Oracle, SQL Server, MySQL, Netezza, and Teradata.
+          </p>
+          <p className="ext-gray-700 text-base sm:text-md md:text-md dark:text-gray-300 mb-4 leading-relaxed mt-4">
+            BeaverTek Database Management includes upgrades, performance optimization, disaster recovery, and security, providing a smooth, secure, and cost-effective solution.
+          </p>
         </motion.div>
       </div>
 
-      {/* Floating Animations */}
+      {/* Floating Animation */}
       <style jsx>{`
         .animate-float {
-          animation: float 6s ease-in-out infinite;
-        }
-        .animate-float-fast {
-          animation: float 4s ease-in-out infinite;
+          animation: float 6s ease-in-out infinite alternate;
         }
         @keyframes float {
           0% { transform: translateY(0px); }
-          50% { transform: translateY(-15px); }
+          50% { transform: translateY(-12px); }
           100% { transform: translateY(0px); }
         }
       `}</style>

@@ -1,73 +1,83 @@
 "use client";
 
 import App_layout from "@/component/layout/app_layout";
-import { motion } from "framer-motion";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import DataAnalytics from "./data_analytics";
 import DataManagement from "./data_management";
 import DataIntegration from "./dataIntegration";
 
-
-
 export default function AnalyticsHero() {
   return (
     <App_layout>
-    <section className="relative w-full min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-white via-emerald-50 to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 overflow-hidden mt-12 px-6">
-      {/* Background Shapes */}
-      <div className="absolute top-20 left-10 w-80 h-80 bg-gradient-to-tr from-green-200 via-white to-blue-200 rounded-full blur-3xl opacity-70 animate-pulse" />
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-tr from-cyan-200 via-white to-purple-200 rounded-full blur-3xl opacity-70 animate-pulse" />
+      <section className="relative w-full min-h-screen flex flex-col items-center justify-center 
+                          bg-gradient-to-r from-blue-50 via-blue-50 to-blue-50 px-6 py-16 overflow-hidden">
 
-      {/* Title */}
-      <motion.h1
-        initial={{ opacity: 0, y: -40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        className="relative z-10 text-4xl md:text-6xl font-extrabold text-gray-900 dark:text-white text-center"
-      >
-        Advance Analytics & BI
-      </motion.h1>
+       
+        {/* Animated Title */}
+        <motion.h1
+          initial={{ opacity: 0, y: -25, scale: 0.9 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="relative z-10 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold 
+                     bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-black 
+                     drop-shadow-lg text-center leading-tight"
+        >
+          Advance Analytics & BI
+        </motion.h1>
 
-      {/* Logo */}
-      <motion.div
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 1, delay: 0.3 }}
-        className="relative z-10 mt-8"
-      >
-        <div className="p-6 rounded-full bg-white dark:bg-gray-800 shadow-xl border border-gray-200 dark:border-gray-700">
-          <Image
-            src="/home/logo.png" // replace with your logo path
-            alt="BeaverTek Logo"
-            width={120}
-            height={120}
-            className="rounded-full"
-          />
-        </div>
-      </motion.div>
+        {/* Animated Logo */}
+       <motion.div
+  initial={{ opacity: 0, scale: 0 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }}
+  className="relative z-10 mt-8 flex items-center justify-center"
+>
+  {/* Rotating Border */}
+  <motion.div
+    animate={{ rotate: 360 }}
+    transition={{ repeat: Infinity, duration: 6, ease: "linear" }}
+    className="absolute w-44 h-44 rounded-full border-4 border-blue-400 border-t-transparent border-b-transparent"
+  ></motion.div>
 
-      {/* Bullet Points */}
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 0.6 }}
-        className="relative z-10 mt-10 space-y-6 max-w-3xl"
-      >
-        <p className="flex items-start text-lg md:text-xl text-gray-700 dark:text-gray-300">
-          <span className="w-3 h-3 mt-2 mr-3 rounded-full bg-green-500 shadow-lg"></span>
-          At the moment many businesses want to develop and manage applications themselves,
-          thus minimizing the dependency on outside IT teams.
-        </p>
+  {/* Logo Container */}
+  <div className="w-32 h-32 rounded-full bg-blue-500 flex items-center justify-center relative z-10">
+    <Image
+      src="/home/logo.svg"
+      alt="BeaverTek Logo"
+      width={120}
+      height={120}
+      className="rounded-full object-cover"
+    />
+  </div>
+</motion.div>
 
-        <p className="flex items-start text-lg md:text-xl text-gray-700 dark:text-gray-300">
-          <span className="w-3 h-3 mt-2 mr-3 rounded-full bg-green-500 shadow-lg"></span>
-          At Beavertek, Inc. we help companies launch and manage all connected smart applications,
-          which in turn provides greater user experience, while reducing cost for Application Development.
-        </p>
-      </motion.div>
-    </section>
-  <DataAnalytics/>
-  <DataManagement/>
-  <DataIntegration/>
+
+        {/* Animated Bullet Points */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1, duration: 1, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="relative z-10 mt-10 space-y-6 max-w-3xl text-center sm:text-left"
+        >
+          <p className="flex text-center items-start text-base sm:text-lg md:text-xl text-gray-800 dark:text-gray-200">
+           
+            At the moment many businesses want to develop and manage applications themselves,
+            thus minimizing the dependency on outside IT teams.
+          </p>
+
+          <p className="flex text-center items-start text-base sm:text-lg md:text-xl text-gray-800 dark:text-gray-200">
+            
+            At Beavertek, Inc. we help companies launch and manage all connected smart applications,
+            which in turn provides greater user experience, while reducing cost for Application Development.
+          </p>
+        </motion.div>
+      </section>
+      <DataAnalytics/>
+      <DataManagement/>
+      <DataIntegration/>
     </App_layout>
   );
 }

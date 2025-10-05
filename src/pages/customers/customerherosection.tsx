@@ -25,7 +25,7 @@ export default function CustomersHeroSection() {
                     alt="Background"
                     fill
                     priority
-                    className="object-cove object-center"
+                    className="max-sm:object-cove object-center"
                   />
                   <div className="absolute inset-0 bg-gradient-to-b from-[#0f172a]/60 via-[#1e293b]/60 to-[#0f172a]/95"></div>
                 </div>
