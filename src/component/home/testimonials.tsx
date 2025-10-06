@@ -9,19 +9,19 @@ export default function TestimonialsSection() {
       name: "Brent",
       role: "Senior Vice President",
       text: `I wanted to take a moment to personally thank you for the exceptional work you have done on Tablu Reporting. Your dedication, attention to details, and willingness to go beyond expectations truly stood out.`,
-      photo: "/home/one.jpeg",
+      photo: "/home/two2.jpg",
     },
     {
       name: "Cooraez",
       role: "CEO",
       text: `BeaverTek efforts not only contributed to the success of the project but also set a high standard for excellence with the team. It's rare to see such initiatives and commitment, and I want you to know that it has not gone unnoticed.`,
-      photo: "/home/three.jpeg",
+      photo: "/home/one1.jpg",
     },
     {
       name: "Ravi Rajagopal",
       role: "CEO",
       text: `I just wanted to give a big shoutout for the incredible work BeaverTek did on campus solutions. BeaverTek didn't just check the boxes they went all in, and it made a huge difference.`,
-      photo: "/home/two.jpeg",
+      photo: "/home/three3.jpg",
     },
   ];
 
