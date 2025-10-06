@@ -73,11 +73,19 @@ export default function UniqueSection() {
               key={idx}
               data-aos="zoom-in"
               data-aos-delay={200 * idx}
-              className="group relative rounded-2xl p-6 sm:p-8 shadow-md hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 cursor-pointer overflow-hidden"
+              className="group relative rounded-2xl p-6 sm:p-8 shadow-md hover:shadow-2xl 
+                         transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 
+                         cursor-pointer overflow-hidden"
             >
-              {/* Background Image (hidden until hover) */}
+              {/* Gradient Reveal Layer */}
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-300 to-white 
+                              transform scale-x-0 group-hover:scale-x-100 origin-left 
+                              transition-transform duration-500 ease-out z-0 rounded-2xl" />
+
+              {/* Background Image */}
               <div
-                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"
+                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity 
+                           duration-500 rounded-2xl z-0"
                 style={{
                   backgroundImage: `url(${item.image})`,
                   backgroundSize: "cover",
@@ -85,24 +93,26 @@ export default function UniqueSection() {
                 }}
               ></div>
 
-              {/* Overlay for readability */}
-              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
-
+          
               {/* Content */}
               <div className="relative z-10 flex flex-col items-center text-center">
-                <div className="mb-4 p-4 rounded-full bg-gray-100 dark:bg-gray-700 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500">
+                <div className="mb-4 p-4 rounded-full bg-gray-100 dark:bg-gray-700 
+                                group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500">
                   {item.icon}
                 </div>
-                <h3 className="text-lg sm:text-xl font-semibold text-gray-800 dark:text-white group-hover:text-blue-500 transition-colors duration-300">
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-800 dark:text-white 
+                               group-hover:text-blue-500 transition-colors duration-300">
                   {item.title}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-400 mt-2 sm:mt-3 text-sm sm:text-base leading-relaxed group-hover:text-white transition-colors duration-300">
+                <p className="text-gray-600 dark:text-gray-400 mt-2 sm:mt-3 text-sm sm:text-base 
+                              leading-relaxed group-hover:text-gray-900 transition-colors duration-300">
                   {item.desc}
                 </p>
               </div>
 
               {/* Glow underline */}
-              <span className="absolute bottom-0 left-0 w-0 h-1 bg-blue-500 group-hover:w-full transition-all duration-500 rounded-full"></span>
+              <span className="absolute bottom-0 left-0 w-0 h-1 bg-blue-500 
+                               group-hover:w-full transition-all duration-500 rounded-full"></span>
             </div>
           ))}
         </div>
@@ -114,11 +124,19 @@ export default function UniqueSection() {
               key={idx}
               data-aos="zoom-in"
               data-aos-delay={600 + 200 * idx}
-              className="group relative rounded-2xl p-6 sm:p-8 shadow-md hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 cursor-pointer overflow-hidden"
+              className="group relative rounded-2xl p-6 sm:p-8 shadow-md hover:shadow-2xl 
+                         transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 
+                         cursor-pointer overflow-hidden"
             >
+              {/* Gradient Reveal Layer */}
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-300 to-white 
+                              transform scale-x-0 group-hover:scale-x-100 origin-left 
+                              transition-transform duration-500 ease-out z-0 rounded-2xl" />
+
               {/* Background Image */}
               <div
-                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"
+                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity 
+                           duration-500 rounded-2xl z-0"
                 style={{
                   backgroundImage: `url(${item.image})`,
                   backgroundSize: "cover",
@@ -126,24 +144,26 @@ export default function UniqueSection() {
                 }}
               ></div>
 
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
-
+             
               {/* Content */}
               <div className="relative z-10 flex flex-col items-center text-center">
-                <div className="mb-4 p-4 rounded-full bg-gray-100 dark:bg-gray-700 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500">
+                <div className="mb-4 p-4 rounded-full bg-gray-100 dark:bg-gray-700 
+                                group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500">
                   {item.icon}
                 </div>
-                <h3 className="text-lg sm:text-xl font-semibold text-gray-800 dark:text-white group-hover:text-blue-500 transition-colors duration-300">
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-800 dark:text-white 
+                               group-hover:text-blue-500 transition-colors duration-300">
                   {item.title}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-400 mt-2 sm:mt-3 text-sm sm:text-base leading-relaxed group-hover:text-white transition-colors duration-300">
+                <p className="text-gray-600 dark:text-gray-400 mt-2 sm:mt-3 text-sm sm:text-base 
+                              leading-relaxed group-hover:text-gray-900 transition-colors duration-300">
                   {item.desc}
                 </p>
               </div>
 
               {/* Glow underline */}
-              <span className="absolute bottom-0 left-0 w-0 h-1 bg-blue-500 group-hover:w-full transition-all duration-500 rounded-full"></span>
+              <span className="absolute bottom-0 left-0 w-0 h-1 bg-blue-500 
+                               group-hover:w-full transition-all duration-500 rounded-full"></span>
             </div>
           ))}
         </div>
@@ -155,25 +175,25 @@ export default function UniqueSection() {
           className="py-8 flex flex-col sm:flex-row justify-center gap-4 sm:gap-6"
         >
           <Link href="/contact/formone">
-          <button
-                  data-aos="zoom-in"
-                  className="px-6 py-3 text-base sm:text-lg bg-gradient-to-r from-blue-400 to-blue-500 
-                                 text-white rounded-full font-semibold shadow-lg hover:shadow-blue-500/50 
-                                 transition-all duration-300 group hover:scale-105"
-                >
-                  Book a Consultation → 
-                </button>
-                </Link>
-<Link href="/services/servicesherosection">
-                 <button
-                  data-aos="zoom-in"
-                  className="px-6 py-3 text-base sm:text-lg bg-gradient-to-r from-blue-400 to-blue-500 
-                                 text-white rounded-full font-semibold shadow-lg hover:shadow-blue-500/50 
-                                 transition-all duration-300 group hover:scale-105"
-                >
-                  Learn More About Our Services → 
-                </button>
-         </Link>
+            <button
+              data-aos="zoom-in"
+              className="px-6 py-3 text-base sm:text-lg bg-gradient-to-r from-blue-400 to-blue-500 
+                         text-white rounded-full font-semibold shadow-lg hover:shadow-blue-500/50 
+                         transition-all duration-300 group hover:scale-105"
+            >
+              Book a Consultation →
+            </button>
+          </Link>
+          <Link href="/services/servicesherosection">
+            <button
+              data-aos="zoom-in"
+              className="px-6 py-3 text-base sm:text-lg bg-gradient-to-r from-blue-400 to-blue-500 
+                         text-white rounded-full font-semibold shadow-lg hover:shadow-blue-500/50 
+                         transition-all duration-300 group hover:scale-105"
+            >
+              Learn More About Our Services →
+            </button>
+          </Link>
         </div>
       </div>
     </section>
