@@ -186,7 +186,7 @@ const Form1 = () => {
             <ul className="space-y-6 font-playfair">
               {[
                 { label: "Phone", value: "+1.949.885.6193" },
-                { label: "Instagram", value: "" },
+                { label: "Instagram", value: "@beavertek_ai" },
                 { label: "Website", value: "beavertek.com" },
                 { label: "Email", value: "info@beavertek.com" },
                 { label: "Address", value: "Irvine, CA 92620, Chennai, India" },
