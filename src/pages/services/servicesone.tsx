@@ -69,8 +69,8 @@ export default function Servicesone() {
           >
             {/* Half Blue, Half Gray Heading */}
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
-              <span className="text-gray-900">Advance Analytics</span>{" "}
-              <span className="text-blue-500">&amp; BI</span>
+              <span className="text-blue-500">Advance Analytics</span>{" "}
+              <span className="text-gray-950">&amp; BI</span>
             </h2>
 
             <ul

@@ -25,8 +25,8 @@ export default function Servicesthree() {
           data-aos="fade-right"
         >
           <h1 className="text-3xl md:text-4xl font-bold mb-6" data-aos="zoom-in">
-            <span className="text-gray-950">Quality</span>{" "}
-            <span className="text-blue-500">Assurance</span>
+            <span className="text-blue-500">Quality</span>{" "}
+            <span className="text-gray-950">Assurance</span>
           </h1>
 
           <ul

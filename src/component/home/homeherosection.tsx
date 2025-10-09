@@ -50,17 +50,17 @@ export default function HeroSection() {
         {/* Floating avatars */}
         <div data-aos="zoom-in" className="flex justify-center space-x-4 mb-6">
           <img
-            src="https://randomuser.me/api/portraits/men/32.jpg"
+            src="/home/one.jpeg"
             alt="Person 1"
             className="w-12 h-12 sm:w-14 sm:h-14 rounded-full border-2 border-cyan-400 shadow-lg hover:scale-110 transition-transform"
           />
           <img
-            src="https://randomuser.me/api/portraits/men/45.jpg"
+            src="/home/two.jpeg"
             alt="Person 2"
             className="w-12 h-12 sm:w-14 sm:h-14 rounded-full border-2 border-cyan-400 shadow-lg hover:scale-110 transition-transform"
           />
           <img
-            src="https://randomuser.me/api/portraits/women/68.jpg"
+            src="/home/three.jpeg"
             alt="Person 3"
             className="w-12 h-12 sm:w-14 sm:h-14 rounded-full border-2 border-cyan-400 shadow-lg hover:scale-110 transition-transform"
           />
