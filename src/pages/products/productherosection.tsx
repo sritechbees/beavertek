@@ -7,6 +7,7 @@ import Image from "next/image";
 import App_layout from "@/component/layout/app_layout";
 import OpenLayer from "./openlayer";
 import Link from "next/link";
+import Head from "next/head";
 
 export default function ProductHeroSection() {
   useEffect(() => {
@@ -15,6 +16,9 @@ export default function ProductHeroSection() {
 
   return (
     <App_layout>
+      <Head>
+        <title>Beavertek | Products</title>
+      </Head>
       <section className="relative text-white py-20 overflow-hidden">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0">

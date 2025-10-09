@@ -6,6 +6,7 @@ import "aos/dist/aos.css";
 import Image from "next/image";
 import App_layout from "@/component/layout/app_layout";
 import Link from "next/link";
+import Head from "next/head";
 
 
 
@@ -16,6 +17,9 @@ export default function ServicesHeroSection() {
 
   return (
     <App_layout>
+         <Head>
+        <title>Beavertek | Services</title>
+      </Head>
     <section className="relative text-white py-20 overflow-hidden">
           <div className="absolute inset-0">
                           <Image

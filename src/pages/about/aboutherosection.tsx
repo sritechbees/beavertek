@@ -6,6 +6,7 @@ import "aos/dist/aos.css";
 import Image from "next/image";
 import Link from "next/link";
 import App_layout from "@/component/layout/app_layout";
+import Head from "next/head";
 
 export default function AboutHeroSection() {
   useEffect(() => {
@@ -14,6 +15,9 @@ export default function AboutHeroSection() {
 
   return (
     <App_layout>
+      <Head>
+      <title>Beavertek | About</title>
+      </Head>
     <div>
       <section className="relative text-white py-20 overflow-hidden">
         <div className="absolute inset-0">

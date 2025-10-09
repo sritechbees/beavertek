@@ -7,6 +7,7 @@ import Image from "next/image";
 import App_layout from "@/component/layout/app_layout";
 import Form1 from "./formone";
 import Link from "next/link";
+import Head from "next/head";
 
 export default function ContactHeroSection() {
   useEffect(() => {
@@ -16,7 +17,9 @@ export default function ContactHeroSection() {
   return (
     <App_layout>
     
-    
+      <Head  >
+      <title>Beavertek | Contact</title>
+     </Head>
     <section className="relative text-white py-20 overflow-hidden">
             {/* Background Image with Overlay */}
             <div className="absolute inset-0">
