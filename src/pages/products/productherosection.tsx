@@ -23,7 +23,7 @@ export default function ProductHeroSection() {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0">
           <Image
-            src="/product/products.jpg" // 🔹 replace with your actual bg image path
+            src="/product/Products.jpg" // 🔹 replace with your actual bg image path
             alt="Background"
             fill
             priority
