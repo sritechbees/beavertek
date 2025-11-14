@@ -1,5 +1,6 @@
 
 
+import Services from "@/component/common/services";
 import HeroSection from "@/component/home/homeherosection";
 
 
@@ -18,6 +19,7 @@ export default function Home() {
  <Header/>
  <HeroSection/>
  <WhoWeAre/>
+ 
  <Footer/>
     </div>
   );
